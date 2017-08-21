@@ -10,13 +10,14 @@ app.use(bodyParser.json());
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     next();
 });
 
 var port = process.env.PORT || 8080;
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/onlinegrocery');
+mongoose.connect('mongodb://localhost/onlinegrocery',{ useMongoClient: true });
 mongoose.Promise = blueBird;
 
 var itemRouter = require('./routes/item');

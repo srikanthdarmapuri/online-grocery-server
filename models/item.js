@@ -3,7 +3,8 @@ var Schema = mongoose.Schema;
 
 var ItemSchema = new Schema({
     title : { type: String, required: true},
-	notes : { type: String}
+    notes : { type: String},
+    purchased : {type: Boolean, default : false}
 },
 {
     timestamps : true

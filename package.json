@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/srikanthdarmapuri/online-grocery-server/issues"
   },
-  "homepage": "https://github.com/srikanthdarmapuri/online-grocery-server#readme"
+  "homepage": "https://github.com/srikanthdarmapuri/online-grocery-server#readme",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.7"
+  }
 }
